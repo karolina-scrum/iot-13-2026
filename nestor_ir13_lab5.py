@@ -1,9 +1,10 @@
+"""Модуль реалізації класів бійців та симуляції поєднку."""
 class Fighter:
     """Клас бійця."""
 
     total_fighters = 0
 
-    def __init__(self, name="Невіомий", health=100, damage_per_attack=10):
+    def __init__(self, name="Невідомий", health=100, damage_per_attack=10):
         """Конструктор класу."""
         self.__name = name
         self.__health = health
@@ -21,7 +22,7 @@ class Fighter:
 
     @staticmethod
     def is_valid_damage(damage):
-        """Cтатичний метод: перевіряє, що шкодф більша за нуль."""
+        """Cтатичний метод: перевіряє, що шкода більша за нуль."""
         return damage > 0
 
     # Функції доступу
@@ -97,7 +98,7 @@ class Fight:
                 return second.get_name()
 
     def show_info(self):
-        """Виведення інформації на екан."""
+        """Виведення інформації на екран."""
         print("Поєдинок між бійцями:")
         self.__fighter1.show_info()
         self.__fighter2.show_info()
